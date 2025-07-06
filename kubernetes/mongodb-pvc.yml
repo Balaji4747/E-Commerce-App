@@ -1,11 +1,15 @@
-apiVersion: v1
 kind: PersistentVolumeClaim
+apiVersion: v1
+
 metadata:
   name: mongodb-pvc
   namespace: easyshop
 spec:
   accessModes:
     - ReadWriteOnce
-  resources:
+  resources: 
     requests:
       storage: 5Gi
+  storageClassName: standard
+
+
